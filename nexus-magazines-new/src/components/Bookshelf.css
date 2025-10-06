@@ -1,0 +1,41 @@
+.bookshelf {
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  gap: 22px;
+  padding: 20px;
+  position: relative;
+}
+
+.shelf {
+  grid-column: 1 / -1;
+  height: 8px;
+  background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+  margin-top: 14px;
+  border-radius: 4px;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.5) inset;
+}
+
+.book {
+  width: 140px;
+  height: 190px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: linear-gradient(145deg, #2b6cff, #00eaff);
+  box-shadow: 0 0 12px rgba(0,255,255,0.3), 0 0 24px rgba(120,89,255,0.25);
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 18px rgba(0,255,255,0.6), 0 0 36px rgba(162,89,255,0.45);
+}
+
+.book.selected {
+  outline: 2px solid cyan;
+}
